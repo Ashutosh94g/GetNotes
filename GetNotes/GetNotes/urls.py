@@ -23,5 +23,8 @@ from .views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('notes/',include('notes.urls'))
+    path('notes/',include('notes.urls')),
+    path("home/",home_page),
+    path("about/",about_page),
+    path("contect/",contect_page)
 ]
