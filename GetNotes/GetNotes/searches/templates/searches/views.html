@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-12 col-8 mx-auto">
+            <p class="lead">
+                you searched for {{ query }}
+            </p>
+            
+            {% for note_item in note_list %}
+                <h1>{{ note_item }}</h1>
+            {% endfor %}
+                                
+        </div>
+    </div>
+{% endblock %}
+    

@@ -5,9 +5,10 @@
     <h2>{{ object.subject }}</h2>
     <br>
     <a class="btn btn-primary" href="/notes/">Go Back!</a>
-</div>
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1yx1aV7Av2M&list=RD1yx1aV7Av2M&start_radio=1"
-        allowfullscreen></iframe>
+    <br>
+    <a class="btn btn-primary" href="update">update</a>
+    {% if object.image %}
+        <img src="{{ object.image.url }}" class="card-img-top"/>
+    {% endif %}
 </div>
 {% endblock %}

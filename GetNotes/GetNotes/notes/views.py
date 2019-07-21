@@ -1,5 +1,6 @@
 """from django.shortcuts import render, get_object_or_404"""
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required 
 from .models import Notes
 from .forms import NotesModelForm
 # Create your views here.
@@ -11,10 +12,10 @@ def notes_list_view(request):
     content = {'object_list': Notes.objects.all()}
     return render(request, template_name, content)
 
-
+@login_required
 def notes_create_view(request):
     '''notes_create_view'''
-    form = NotesModelForm(request.POST or None)
+    form = NotesModelForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         form.save()
         form = NotesModelForm(request.POST or None)
