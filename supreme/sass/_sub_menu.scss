@@ -1,0 +1,36 @@
+.sub_menu{
+    background-color: $heading_color;
+    padding: 14px 0px;
+    .sub_menu_right_content{
+        a{
+            color: $white_color;
+        }
+        i{
+            color: $btn_bg;
+            margin-right: 13px;
+        }
+        span{
+            color: #757785;
+            margin: 0px 20px;
+        }
+        @media #{$small_mobile}{
+            text-align: center;
+        }        
+    }
+    .sub_menu_social_icon{
+        float: right;
+        text-align: right;
+        @media #{$small_mobile}{
+            text-align: center;
+            float: none;
+            margin-top: 15px;
+        }        
+        a{
+            color: $white_color;
+            margin-right: 20px;
+            &:hover{
+                color: $btn_bg;
+            }
+        }
+    }
+}
