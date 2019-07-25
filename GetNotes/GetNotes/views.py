@@ -1,4 +1,4 @@
-from django.shortcut import render , get_object_or_404
+from django.shortcuts import render , get_object_or_404
 
 def home_page(request):
 	template_name = 'home.html'
