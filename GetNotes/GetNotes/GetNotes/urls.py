@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from searches.views import search_view
 from notes.views import notes_create_view
-from .views import (home_page, about_page, contect_page)
+from .views import (home_page, about_page, contact_page)
 
 
 urlpatterns = [
@@ -28,7 +28,7 @@ urlpatterns = [
     path("home/", home_page),
     path("", home_page),
     path("about/", about_page),
-    path("contect/", contect_page),
+    path("contact/", contact_page),
     path('search/', search_view)
 ]
 

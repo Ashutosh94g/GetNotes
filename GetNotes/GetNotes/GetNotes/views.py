@@ -13,8 +13,8 @@ def about_page(request):
 	return render(request, template_name)
 
 
-def contect_page(request):
-	"""this is a contect page"""
-	template_name = 'contect.html'
+def contact_page(request):
+	"""this is a contact page"""
+	template_name = 'contact.html'
 	return render(request, template_name)
 	
