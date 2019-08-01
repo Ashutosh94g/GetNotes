@@ -46,7 +46,7 @@ class Notes(models.Model):
 	user = models.ForeignKey(User,default=1,null = True, on_delete=models.SET_NULL)
 	department = models.CharField(max_length = 64)
 	subject = models.CharField(max_length = 64)
-	image = models.ImageField(upload_to='image/',blank=True,null=True)
+	image = models.FileField(upload_to='image/',blank=True,null=True)
 	slug = models.SlugField(unique=True)
 	timestamp = models.DateTimeField(auto_now_add=True)
 	publish_date = models.DateTimeField(auto_now=False,auto_now_add=False,null = True, blank = True)
