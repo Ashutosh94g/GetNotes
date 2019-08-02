@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def home_page(request):
 	"""this is home page"""
-	template_name = 'home.html'
+	template_name = 'index.html'
 	return render(request, template_name)
 
 

@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 <h1>This is our Home page</h1>
 <a href="/about/">About Us</a>
 <br>
 <a href="/contact/">Contact Us</a>
 <br>
 <a href="/create_new/">create_new</a>
-<script src = '/GetNotes/templates/js/script.js'></script>
+<script src = "{% static 'script.js' %}"></script>
 {% endblock %}
